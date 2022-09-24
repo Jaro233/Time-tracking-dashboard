@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    color: #fff;
+    /* overflow: scroll; */
+}
+
+footer {
+    display: none;
+}
+
+main { 
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 17px;
+    grid-row-gap: 17px;
+    margin: 20px;
+    /* overflow: scroll; */
+}
+
+.user { grid-area: 1 / 1 / 3 / 2; }
+.work { grid-area: 1 / 2 / 2 / 3; }
+.play { grid-area: 1 / 3 / 2 / 4; }
+.study { grid-area: 1 / 4 / 2 / 5; }
+.exercise { grid-area: 2 / 2 / 3 / 3; }
+.social { grid-area: 2 / 3 / 3 / 4; }
+.self-care { grid-area: 2 / 4 / 3 / 5; }
+
+.user { 
+    max-width: 300px;
+    width: 100%;
+    background-color: hsl(235, 46%, 20%);
+    /* padding: 23px; */
+    border-radius: 15px;
+}
+
+.overlay-user { 
+    /* position: static; */
+    background-color: hsl(246, 80%, 60%);
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.overlay-user p {
+    color: hsl(236, 100%, 87%)
+}
+
+h1 { 
+    margin-bottom: 30px;
+    margin-top: 6px;
+    font-weight: 300;
+}
+
+.user img {
+    max-width: 65px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    max-height: 73px;
+}
+
+.name-times { 
+    margin: 20px 0 20px 30px;
+    color: hsl(236, 100%, 87%);
+    cursor: pointer;
+}
+
+.name-times:hover {
+    color: #fff;
+}
+
+.name-times:focus {
+    color: #fff;
+}
+
+.cards { 
+    max-width: 300px;
+    width: 100%;
+    border-radius: 15px;
+    z-index: 2;
+    position: relative;
+}
+
+.overlay-top:hover {
+    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
+}
+
+.work {
+    background-color: hsl(15, 100%, 70%);
+}
+
+.play { 
+    background-color: hsl(195, 74%, 62%)
+}
+
+.study { 
+    background-color: hsl(348, 100%, 68%)
+}
+
+.exercise { 
+    background-color: hsl(145, 58%, 55%)
+}
+
+.social { 
+    background-color: hsl(264, 64%, 52%)
+}
+
+.self-care { 
+    background-color: hsl(43, 84%, 65%)
+}
+
+.overlay-top { 
+    background-color: hsl(235, 46%, 20%);
+    max-width: 300px;
+    width: 100%;
+    border-radius: 11px;
+    /* padding: 30px; */
+    z-index: 3;
+    padding: 20px 0 20px 30px;
+    /* margin-top: 65px; */
+    height: 80%;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.previous-time {
+    color: hsl(236, 100%, 87%)
+}
+
+.thing-and-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ellipsis {
+    max-width: 20px;
+    width: 100%;
+    margin-right: 30px;;
+    cursor: pointer;
+}
+
+.overlay-top .names-of-things { 
+    margin-bottom: 15px;
+}
+
+.overlay-top .time { 
+    margin-bottom: 5px;
+}
+
+.card-images {
+    max-width: 60px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+.name-of-things {
+    font-size: 18px;
+}
+
+.hidden { 
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: 700px;
+        height: calc(100%);
+        overflow-y: auto;
+    }
+
+    .main-container {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .user { 
+        max-width: 700px;
+        margin-top: 20px;
+    }
+
+    .overlay-user {
+        max-width: 700px;
+        display: flex;
+    }
+
+    .report-div {
+        margin-left: 30px;
+    }
+
+    .overlay-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-section {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 28px;
+    }
+
+    .cards { 
+        max-width: 700px;
+    }
+
+    .overlay-top {
+        max-width: 700px;
+    }
+
+    .flex-hours {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hidden { 
+        display: none;
+    }
+
+    .previous-time {
+        margin: 20px 25px 0 0;
+    }
+
+    .self-care { 
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .report-div {
+        margin: auto;
+        margin-left: 10px;
+    }   
+
+    .user-section {
+        max-width: 250px;
+        justify-content: space-around;
+    } 
+}

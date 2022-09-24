@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <div class="user">
+      <div class="overlay-user">
+        <img src="./images/image-jeremy.png" alt="jeremy-image">
+        <div class="report-div">
+          <p class="report-for">Report for</p>
+          <h1 class="name"> Jeremy Robson</h1>
+        </div>
+        
+      </div>
+      <section class="user-section">
+        <p class="name-times" data-option="daily" tabindex="1" id="daily">Daily</p>
+        <p class="name-times" data-option="weekly" tabindex="1" id="weekly">Weekly</p>
+        <p class="name-times" data-option="monthly" tabindex="1" id="monthly">Monthly</p>
+      </section>
+    </div>
+    <div class="work cards">
+      <img class="card-images" src="./images/icon-work.svg" alt="work-image">
+      <div class="overlay-top">
+        <div class="thing-and-icon">
+          <span><p class="names-of-things">Work</p></span>
+          <span><img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis-image"></span>
+        </div>
+        <div class="flex-hours-daily flex-hours hidden">
+          <h1 class="time daily">0hrs</h1>
+        <p class="previous-time previous-daily">Previous - 1hr</p>
+        </div>
+        <div class="flex-hours-weekly flex-hours hidden">
+          <h1 class="time weekly">2hrs</h1>
+        <p class="previous-time previous-weekly">Previous - 12hrs</p>
+        </div>
+        <div class="flex-hours-monthly flex-hours hidden">
+          <h1 class="time monthly">7hrs</h1>
+          <p class="previous-time previous-monthly">Previous - 11hrs</p>
+        </div>
+        
+       
+       
+    
+      </div>
+    </div>
+    <div class="play cards">
+      <img class="card-images" src="./images/icon-play.svg" alt="play-image">
+      <div class="overlay-top">
+        <div class="thing-and-icon">
+          <span><p class="names-of-things">Play</p></span>
+          <span><img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis-image"></span>
+        </div>
+        <div class="flex-hours-daily flex-hours hidden">
+          <h1 class="time daily">0hrs</h1>
+        <p class="previous-time previous-daily">Previous - 1hr</p>
+        </div>
+        <div class="flex-hours-weekly flex-hours hidden">
+          <h1 class="time weekly">2hrs</h1>
+        <p class="previous-time previous-weekly">Previous - 12hrs</p>
+        </div>
+        <div class="flex-hours-monthly flex-hours hidden">
+          <h1 class="time monthly">7hrs</h1>
+          <p class="previous-time previous-monthly">Previous - 11hrs</p>
+        </div>
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <div class="study cards">
+      <img class="card-images" src="./images/icon-study.svg" alt="study-image">
+      <div class="overlay-top">
+        <div class="thing-and-icon">
+          <span><p class="names-of-things">Study</p></span>
+          <span><img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis-image"></span>
+        </div>
+        <div class="flex-hours-daily flex-hours hidden">
+          <h1 class="time daily">0hrs</h1>
+        <p class="previous-time previous-daily">Previous - 1hr</p>
+        </div>
+        <div class="flex-hours-weekly flex-hours hidden">
+          <h1 class="time weekly">2hrs</h1>
+        <p class="previous-time previous-weekly">Previous - 12hrs</p>
+        </div>
+        <div class="flex-hours-monthly flex-hours hidden">
+          <h1 class="time monthly">7hrs</h1>
+          <p class="previous-time previous-monthly">Previous - 11hrs</p>
+        </div>
+        
+        
+        
+        
+      </div>
+      
+    </div>
+
+    <div class="exercise cards">
+      <img class="card-images" src="./images/icon-exercise.svg" alt="exercise-image">
+      <div class="overlay-top">
+        <div class="thing-and-icon">
+          <span><p class="names-of-things">Exercise</p></span>
+          <span><img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis-image"></span>
+        </div>
+        <div class="flex-hours-daily flex-hours hidden">
+          <h1 class="time daily">0hrs</h1>
+        <p class="previous-time previous-daily">Previous - 1hr</p>
+        </div>
+        <div class="flex-hours-weekly flex-hours hidden">
+          <h1 class="time weekly">2hrs</h1>
+        <p class="previous-time previous-weekly">Previous - 12hrs</p>
+        </div>
+        <div class="flex-hours-monthly flex-hours hidden">
+          <h1 class="time monthly">7hrs</h1>
+          <p class="previous-time previous-monthly">Previous - 11hrs</p>
+        </div>
+        
+        
+        
+        
+      </div>
+      
+    </div>
+    <div class="social cards">
+      <img class="card-images" src="./images/icon-social.svg" alt="social-image">
+      <div class="overlay-top">
+        <div class="thing-and-icon">
+          <span><p class="names-of-things">Social</p></span>
+          <span><img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis-image"></span>
+        </div>
+        <div class="flex-hours-daily flex-hours hidden">
+          <h1 class="time daily">0hrs</h1>
+        <p class="previous-time previous-daily">Previous - 1hr</p>
+        </div>
+        <div class="flex-hours-weekly flex-hours hidden">
+          <h1 class="time weekly">2hrs</h1>
+        <p class="previous-time previous-weekly">Previous - 12hrs</p>
+        </div>
+        <div class="flex-hours-monthly flex-hours hidden">
+          <h1 class="time monthly">7hrs</h1>
+          <p class="previous-time previous-monthly">Previous - 11hrs</p>
+        </div>
+        
+       
+      </div>
+    </div>
+    <div class="self-care cards">
+      <img class="card-images" src="./images/icon-self-care.svg" alt="self-care-image">
+      <div class="overlay-top">
+        <div class="thing-and-icon">
+          <span><p class="names-of-things">Self Care</p></span>
+          <span><img class="ellipsis" src="./images/icon-ellipsis.svg" alt="ellipsis-image"></span>
+        </div>
+        <div class="flex-hours-daily flex-hours hidden">
+          <h1 class="time daily">0hrs</h1>
+        <p class="previous-time previous-daily">Previous - 1hr</p>
+        </div>
+        <div class="flex-hours-weekly flex-hours hidden">
+          <h1 class="time weekly">2hrs</h1>
+        <p class="previous-time previous-weekly">Previous - 12hrs</p>
+        </div>
+        <div class="flex-hours-monthly flex-hours hidden">
+          <h1 class="time monthly">7hrs</h1>
+          <p class="previous-time previous-monthly">Previous - 11hrs</p>
+        </div>
+        
+        
+        
+       
+      </div>
+    </div>
+  </main>
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+
+  <script src="script.js"> </script>
+</body>
+</html>
